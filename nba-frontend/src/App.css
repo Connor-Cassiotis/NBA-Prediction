@@ -1,0 +1,115 @@
+/* Custom styles for React DatePicker */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100% !important;
+}
+
+.react-datepicker {
+  background-color: #343a40 !important;
+  border: 1px solid #495057 !important;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+}
+
+.react-datepicker__header {
+  background-color: #212529 !important;
+  border-bottom: 1px solid #495057 !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  color: #ffffff !important;
+}
+
+.react-datepicker__day-name {
+  color: #adb5bd !important;
+}
+
+.react-datepicker__day {
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  margin: 2px !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #495057 !important;
+  border-radius: 8px !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #722F37 !important;
+  border-radius: 8px !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: #5D252A !important;
+  border-radius: 8px !important;
+}
+
+.react-datepicker__day--outside-month {
+  color: #6c757d !important;
+}
+
+.react-datepicker__navigation {
+  top: 12px !important;
+}
+
+.react-datepicker__navigation--previous {
+  left: 12px !important;
+}
+
+.react-datepicker__navigation--next {
+  right: 12px !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #722F37 !important;
+}
+
+.react-datepicker__triangle {
+  border-bottom-color: #343a40 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212529;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #495057;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6c757d;
+}
+
+/* Selection styling */
+::selection {
+  background-color: #722F37;
+  color: #ffffff;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid #722F37;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

@@ -371,7 +371,7 @@ def apply_custom_css():
         background-clip: text;
         font-weight: 800;
         animation: gradientText 4s ease-in-out infinite;
-        text-shadow: 0 0 30px rgba(239, 68, 68, 0.3);
+        filter: drop-shadow(0 2px 4px rgba(239, 68, 68, 0.4));
     }
     
     @keyframes gradientText {

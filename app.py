@@ -359,24 +359,43 @@ def apply_custom_css():
     
     /* Premium gradient text */
     .gradient-text {
-        background: linear-gradient(135deg, 
-            #ef4444 0%, 
-            #dc2626 25%, 
-            #b91c1c 50%, 
-            #991b1b 75%, 
-            #ef4444 100%);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #ef4444 !important;
         font-weight: 800;
-        animation: gradientText 4s ease-in-out infinite;
-        filter: drop-shadow(0 2px 4px rgba(239, 68, 68, 0.4));
+        text-shadow: 0 0 20px rgba(239, 68, 68, 0.5),
+                     0 0 40px rgba(239, 68, 68, 0.3),
+                     0 2px 4px rgba(0, 0, 0, 0.5);
+        animation: glowText 2s ease-in-out infinite;
     }
     
-    @keyframes gradientText {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
+    @keyframes glowText {
+        0%, 100% { 
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.5),
+                         0 0 40px rgba(239, 68, 68, 0.3),
+                         0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        50% { 
+            text-shadow: 0 0 30px rgba(239, 68, 68, 0.8),
+                         0 0 60px rgba(239, 68, 68, 0.5),
+                         0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    }
+    
+    /* Remove link styling from headings */
+    .gradient-text, .gradient-text a {
+        text-decoration: none !important;
+        pointer-events: none !important;
+        cursor: default !important;
+    }
+    
+    h1, h2, h3 {
+        pointer-events: none !important;
+        cursor: default !important;
+    }
+    
+    h1 a, h2 a, h3 a {
+        text-decoration: none !important;
+        pointer-events: none !important;
+        color: inherit !important;
     }
     
     /* Enhanced prediction card */

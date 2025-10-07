@@ -10,7 +10,7 @@ from datetime import datetime, date
 import random
 import time
 
-# NBA Teams data (converted from JavaScript)
+# NBA Teams data 
 NBA_TEAMS = [
     {"value": "ATL", "label": "Atlanta Hawks", "city": "Atlanta"},
     {"value": "BOS", "label": "Boston Celtics", "city": "Boston"},
@@ -49,10 +49,6 @@ def get_team_by_value(value):
     return next((team for team in NBA_TEAMS if team["value"] == value), None)
 
 def predict_game(home_team, away_team, game_date):
-    """
-    Mock prediction function (replicating the Flask server logic)
-    In a real scenario, this would use the actual ML model
-    """
     # Simulate processing time
     time.sleep(1.5)
     
